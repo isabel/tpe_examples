@@ -1,0 +1,27 @@
+/*
+ * (c) 2009 Thomas Smits
+ */
+package de.smits_net.tpe.reader;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class UpperCaseReaderTest {
+
+    public static void main(String[] args) throws IOException {
+
+        String dateiname = "/tmp/text.txt";
+
+        BufferedReader reader = new BufferedReader(
+                new UpperCaseReader(
+                        new FileReader(dateiname)));
+
+        String zeile;
+        while ((zeile = reader.readLine()) != null) {
+            System.out.println(zeile);
+        }
+
+        reader.close();
+    }
+}
