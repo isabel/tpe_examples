@@ -23,10 +23,11 @@ public class ClazzDemo {
         System.out.println(clazz.isInstance(new Geschaeftsfuehrer())); // true
         printArray(clazz.getFields()); // []
         printArray(clazz.getConstructors()); //  [public de.smits_net.tpe.classobj.Geschaeftsfuehrer()]
-        printArray(clazz.getMethods()); // [public boolean java.lang.Object.equals(java.lang.Object),
-                                        // public java.lang.String de.smits_net.tpe.classobj.Geschaeftsfuehrer.getDetails()
-                                        // public final native void java.lang.Object.notify(),
-                                        // ...
+        printArray(clazz.getMethods());
+        // [public boolean java.lang.Object.equals(java.lang.Object),
+        // public java.lang.String de.smits_net.tpe.classobj.Geschaeftsfuehrer.getDetails()
+        // public final native void java.lang.Object.notify(),
+        // ...
 
     }
 
