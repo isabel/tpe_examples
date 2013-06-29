@@ -3,7 +3,7 @@
  */
 package de.smits_net.tpe.classobj;
 
-public class Vorstand extends Mitarbeiter {
+public class Vorstand extends Manager {
 
     private double firmengewinn;
 

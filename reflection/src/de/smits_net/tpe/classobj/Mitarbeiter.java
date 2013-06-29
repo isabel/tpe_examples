@@ -3,12 +3,15 @@
  */
 package de.smits_net.tpe.classobj;
 
-public abstract class Mitarbeiter {
+import java.util.Date;
 
-    public final double bonus() {
-        return zielbonus() * zielerreichung();
+public class Mitarbeiter {
+    public String name;
+    public double gehalt;
+    public Date geboren;
+
+    public String getDetails() {
+        return name + ", geb. am " + geboren +
+                " hat ein Gehalt von " + gehalt;
     }
-
-    public abstract double zielerreichung();
-    public abstract double zielbonus();
 }

@@ -11,22 +11,23 @@ public class ClazzDemo {
 
     public static void main(String[] args) {
 
-        Class<Vorstand> clazz = Vorstand.class;
+        Class<Geschaeftsfuehrer> clazz = Geschaeftsfuehrer.class;
 
-        System.out.println(clazz.getSuperclass()); // class de.smits_net.tpe.Mitarbeiter
-        System.out.println(clazz.getName()); // de.smits_net.tpe.Vorstand
+        System.out.println(clazz.getSuperclass()); // class de.smits_net.tpe.classobj.Manager
+        System.out.println(clazz.getName()); // de.smits_net.tpe.classobj.Geschaeftsfuehrer
         System.out.println(clazz.isInterface()); // false
-        System.out.println(clazz.getPackage()); // package de.smits_net.tpe
+        System.out.println(clazz.getPackage()); // package de.smits_net.tpe.classobj
         System.out.println(clazz.isAssignableFrom(Mitarbeiter.class)); // false
         System.out.println(Mitarbeiter.class.isAssignableFrom(clazz)); // true
-        System.out.println(clazz.isInstance(new Angestellter())); // false
-        System.out.println(clazz.isInstance(new Vorstand())); // true
+        System.out.println(clazz.isInstance(new Vorstand())); // false
+        System.out.println(clazz.isInstance(new Geschaeftsfuehrer())); // true
         printArray(clazz.getFields()); // []
-        printArray(clazz.getConstructors()); // [public de.smits_net.tpe.Vorstand()]
+        printArray(clazz.getConstructors()); //  [public de.smits_net.tpe.classobj.Geschaeftsfuehrer()]
         printArray(clazz.getMethods()); // [public boolean java.lang.Object.equals(java.lang.Object),
-                                        // public final double de.smits_net.tpe.Mitarbeiter.bonus(),
-                                        // public double de.smits_net.tpe.Vorstand.zielerreichung()
+                                        // public java.lang.String de.smits_net.tpe.classobj.Geschaeftsfuehrer.getDetails()
+                                        // public final native void java.lang.Object.notify(),
                                         // ...
+
     }
 
     private static void printArray(Object[] array) {
