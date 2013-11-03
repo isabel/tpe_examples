@@ -5,22 +5,16 @@ package de.smits_net.tpe.callback;
 
 public class Berechnung {
 
-    private static int[][] zahlen = {{ 1,2 }, { 2,4 }};
-
-    public static int[] berechne(int[][] input, Funktion funktion) {
-
-        int[] ergebnis = new int[input.length];
-
-        for (int i = 0; i < input.length; i++) {
-            ergebnis[i] = funktion.apply(input[i][0], input[i][1]);
-        }
-
+    public static int berechne(int input1, int input2, Funktion funktion) {
+        int ergebnis = funktion.apply(input1, input2);
         return ergebnis;
     }
 
     public static void main(String[] args) {
-        int[] ergebnis;
-        ergebnis = berechne(zahlen, new Subtraktion());
-        ergebnis = berechne(zahlen, new Addition());
+        Funktion sub = new Subtraktion();
+        Funktion add = new Addition();
+
+        System.out.println(berechne(5, 3, sub));
+        System.out.println(berechne(1, 7, add));
     }
 }
